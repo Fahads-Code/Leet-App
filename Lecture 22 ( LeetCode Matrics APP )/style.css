@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-color: #000000;
+    color: #F5F5F5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: hsl(0, 2%, 11%);
+    border: 5px solid white;
+    padding: 30px;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 600px;
+}
+h1{
+    font-size: 2rem;
+}
+.user_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: start;
+}
+.user_input_container{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+#user_input{
+    width: 80%;
+    padding: 0.5rem;
+    border: none;
+}
+#search_btn{
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+}
+.circle{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid hsl(146, 100%, 50%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    /*1. conic-gradient: Ek gradient banata hai jo center se shuru hota hai aur circle ke around spin karta hai.
+    2. #299f5d var(--progress-degree, 0%): Starting color hai (#299f5d), aur yeh angle var(--progress-degree)
+    se decide hota hai (default: 0%).
+    3. #283a2e 0%: Dusra color hai (#283a2e), jo wahi se shuru hota hai jahan first color khatam hota hai.*/
+    background: conic-gradient(rgb(23, 77, 47) var(--progress-degree, 0%), hwb(141 3% 87%) 0%);
+    flex-direction: column;
+}
+.circle span{
+    position: relative;
+    z-index: 2;
+}
+.progress{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.card{
+    background-color: hwb(141 3% 87%);
+    border: 2px solid hsl(146, 100%, 50%);
+    padding: 0.3rem;
+}
+/* #search_btn{
+    margin-bottom: 1rem;
+}
+#user_input{
+    margin-bottom: 1rem;
+} */
